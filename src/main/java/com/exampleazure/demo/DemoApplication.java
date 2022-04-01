@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoApplication {
 
 	@GetMapping("/message")
-	public String message(){ //@RequestHeader("Request-ID") String requestId
-		return "congrats";//  [" + requestId + "]";
+	public String message(@RequestHeader("Request-ID") String requestId){
+		return "congrats  [" + requestId + "]";
 	}
 
 	public static void main(String[] args) {
